@@ -28,7 +28,7 @@ export class Tcp implements IService {
       controllers,
     });
 
-    return new Promise((resolve): any => {
+    return new Promise<boolean>((resolve): any => {
       server.listen(4001, () => {
         console.log("Tcp service started on port 4001");
         return resolve(true);
